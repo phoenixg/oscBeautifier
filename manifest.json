@@ -1,7 +1,7 @@
 {
     "name": "Osc Beautifier",
     "version": "1.0",
-    "manifest_version": "2",
+    "manifest_version": 2,
     "description": "让OSC更易读",
     "permissions": ["http://*.oschina.net/", "https://*.oschina.net/"],
     "content_scripts": [{
@@ -9,7 +9,7 @@
         "js": ["jquery1.7.2.min.js","contentscript.js"]
     }],
         "browser_action": {
-        "default_title": "默认的标题",
+        "default_title": "Osc Beautifier",
         "default_icon": "icon_19.png",
         "default_popup": "popup.html"
     }
