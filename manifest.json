@@ -3,12 +3,20 @@
     "version": "1.0",
     "manifest_version": 2,
     "description": "让OSC更易读",
-    "permissions": ["http://*.oschina.net/", "https://*.oschina.net/"],
+    "background": {
+       "scripts": ["background.js"]
+    },
+    "permissions": [   
+        "webRequest",
+        "webRequestBlocking",
+        "http://*.oschina.net/", "https://*.oschina.net/"
+    ],
     "content_scripts": [{
-        "matches": ["http://*.oschina.net/*"],
+        "matches": ["*://*.oschina.net/*"],
+        "css":["contentstyle.css"],
         "js": ["jquery1.7.2.min.js","contentscript.js"]
     }],
-        "browser_action": {
+    "browser_action": {
         "default_title": "Osc Beautifier",
         "default_icon": "icon_19.png",
         "default_popup": "popup.html"
