@@ -14,7 +14,7 @@
     "content_scripts": [{
         "matches": ["*://*.oschina.net/*"],
         "css":["contentstyle.css"],
-        "js": ["jquery1.7.2.min.js","contentscript.js"]
+        "js": ["jquery1.7.2.min.js", "highlight.js", "contentscript.js"]
     }],
     "browser_action": {
         "default_title": "Osc Beautifier",
