@@ -20,5 +20,10 @@
         "default_title": "Osc Beautifier",
         "default_icon": "icon_19.png",
         "default_popup": "popup.html"
-    }
+    },
+    "web_accessible_resources": [
+        "brush.js",
+        "languages/*",
+        "styles/*"
+    ]
 }
