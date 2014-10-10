@@ -3,7 +3,7 @@
     "author": "Phoenix",
     "version": "1.0",
     "manifest_version": 2,
-    "icons": { "128": "test.png" },
+    "icons": { "128": "icon_19.png" },
     "description": "让OSC更易读",
     "background": {
        "scripts": ["background.js"]
