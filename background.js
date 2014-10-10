@@ -27,3 +27,26 @@ chrome.webRequest.onBeforeRequest.addListener(
     },
     ["blocking"]
 );
+
+
+
+
+
+
+/* google -> useso */
+chrome.webRequest.onBeforeRequest.addListener(replaceWithUseso,
+    {urls: ["<all_urls>"]},
+    ["blocking"]
+);
+
+function replaceWithUseso(data){
+    var url = data.url;
+    var domain = url.match(/^(http|https)\:\/\/([a-zA-Z0-9\.\-])+/g);
+    var judge = domain && domain[0].match(/googleapis/g);
+
+    if(judge){
+        //for useso do not support https...
+        url = url.replace(/^https/, 'http').replace('googleapis', 'useso')
+        return {redirectUrl: url};
+    }
+}
